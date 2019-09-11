@@ -1,4 +1,5 @@
 h1 タスクの新規登録
+
 .nav.justify-content-end
   = link_to '一覧', tasks_path, class:'nav-link'
 
@@ -8,5 +9,5 @@ h1 タスクの新規登録
     =f.text_field :name, class:'form-control', id:'tasl_name'
   .form-group
     = f.label :description
-    = f.text_area :description, rows: 5, class:'form-control',id: 'task_descriotion'
+    = f.text_area :description, rows: 5, class:'form-control',id:'task_descriotion'
   = f.submit nil, class:'btn btn-primary'
