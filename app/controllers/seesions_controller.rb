@@ -1,4 +1,6 @@
 class SeesionsController < ApplicationController
+skip_before_action :login_repuired
+
   def new
   end
 
