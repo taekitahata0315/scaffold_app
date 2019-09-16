@@ -1,14 +1,12 @@
 - if task.errors.present?
   ul#error_explanation
     - task.errors.full_messages.each do |massage|
-      li= massage
-
-
+      li= message
 
 = form_with model: task, local: true do |f|
   .form-group
     = f.label :name
-    =f.text_field :name, class:'form-control', id:'tasl_name'
+    =f.text_field :name, class:'form-control', id:'task_name'
   .form-group
     = f.label :description
     = f.text_area :description, rows: 5, class:'form-control',id: 'task_descriotion'

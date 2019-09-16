@@ -10,15 +10,16 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
   .app-title.navbar.navbar-expand-md.navbar-light.bg-light
-    .navdar-brand Taskleaf
+    .navbar-brand Taskleaf
 
-    ul.navber-nav.ml-auto
+    ul.navbar-nav.ml-auto
       - if current_user
-        li .nav-item= link_to 'タスク一覧', taske_path, class:'nav-link'
-        li .nav-item= link_to 'ユーザー一覧', admin_users_path, class:'nav-link'
-        li .nav-item= link_to 'ログアウト', logout_path,method: :delete, class:'nab-link'
+        li.nav-item= link_to 'タスク一覧', tasks_path, class:'nav-link'
+        - if current_user.admin?
+          li.nav-item= link_to 'ユーザー一覧', admin_users_path, class:'nav-link'
+        li.nav-item= link_to 'ログアウト', logout_path,method: :delete, class:'nav-link'
       -else
-        li .nab-item= link_to 'ログイン', login_path, class:'nab-link'
+        li.nav-item= link_to 'ログイン', login_path, class:'nav-link'
   .container
     - if flash.notice.present?
       .alert.alert-success= flash.notice
