@@ -13,7 +13,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(task_params)
+    @task = Task.new(task_params.merge(user_id: current_user.id))
 
     if @task.save
       redirect_to @task, notice: "タスク「#{@task.name}」と登録しました。"
@@ -42,6 +42,6 @@ class TasksController < ApplicationController
   end
 
   def set_task
-    @task = current_user.tasks, find(params[:id])
+    @task = current_user.tasks.find(params[:id])
   end
 end
