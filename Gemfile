@@ -67,4 +67,5 @@ gem 'bootstrap'
 gem 'rails_autolink'
 gem "pry-rails"
 gem 'ransack'
+gem 'sqlite3', group: :development
 

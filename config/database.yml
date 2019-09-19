@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: scaffold_app_production
-  username: scaffold_app
-  password: <%= ENV['SCAFFOLD_APP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
