@@ -52,6 +52,10 @@ class Admin::UsersController < ApplicationController
   end
 
   def require_admin
-    redirect_to root_path unless current_user.admin?
-    end
+    redirect_to root_path if user_logged_in? && current_user.admin? 
+  end
+
+  def user_logged_in?
+  !current_user.nil?
+  end
 end
