@@ -5,7 +5,7 @@ h1 タスク詳細
 table.table.table-hover
   tbody
     tr
-      th= Task.human_attribute_name("名前")
+      th= Task.human_attribute_name(:name,locale: :ja)
       td= @task.name
     tr
       th= Task.human_attribute_name("詳しい説明")
