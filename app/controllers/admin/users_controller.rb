@@ -3,7 +3,7 @@ class Admin::UsersController < ApplicationController
   before_action :require_admin ,except: [:new, :create]
 
   def index
-    @users =User.all
+    @users = User.all.order(created_at: :desc)
   end
 
   def show
@@ -22,7 +22,7 @@ class Admin::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to root_path, notice:"ユーザー「#{@user.name}」を登録しました。"
+      redirect_to root_path(@user), notice:"ユーザー「#{@user.name}」を登録しました。"
     else
       render :new
     end
@@ -52,8 +52,10 @@ class Admin::UsersController < ApplicationController
   end
 
   def require_admin
-    redirect_to root_path if user_logged_in? && current_user.admin? 
+    if user_logged_in? && current_user.admin? 
+    end
   end
+
 
   def user_logged_in?
   !current_user.nil?

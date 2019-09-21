@@ -15,8 +15,8 @@ h1 タスク一覧
 table.table.table-hover
   thead.thead-default
     tr
-      th= sort_link(@q, "名前")
-      th= Task.human_attribute_name("登録日時")
+      th= sort_link(@q, "名称")
+      th= Task.human_attribute_name("登録日")
       th
   tboby
     - @tasks.each do |task|
