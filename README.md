@@ -1,14 +1,22 @@
 ## タスク管理ツール
 ・タスク一覧画面
 https://gyazo.com/e0284ede567c610455f0103114f9be6d
+
 ・ログイン画面
 https://gyazo.com/2b545571bd85f49f79678170e453fb84
+
 ・新規ユーザ登録画面
 https://gyazo.com/1c1964a21ad812bff52239e0cfb5ec08
 
 
 ### 開発環境
-ruby・Ruby on rails・slim・Psotger・bootstrap
+ruby・Ruby on rails・slim　
+  #### DB
+・Psotger
+  #### gem
+・bootstrap
+
+・borpy
 
 ### 内容
 一日のやることを入力する備忘録
