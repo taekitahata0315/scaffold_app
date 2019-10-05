@@ -3,8 +3,8 @@ h1 ログイン
 = form_with socpe: :session, local: true do |f|
   .form-group
     =f.label :email, 'メールアドレス'
-    =f.text_field :email, class: 'form-control', id: 'session_email'
+    =f.text_field :email, class: 'form-control shadow-lg p-3 mb-5 bg-white rounded', id: 'session_email'
   .form-group
     =f.label :password, 'パスワード'
-    =f.password_field :password, class: 'form-control', id: 'session_password'
-  =f.submit 'ログインする', class: 'btn btn-primary'
+    =f.password_field :password, class: 'form-control shadow-lg p-3 mb-5 bg-white rounded', id: 'session_password'
+  =f.submit 'ログインする', class: 'btn btn-primary btn-sm'
