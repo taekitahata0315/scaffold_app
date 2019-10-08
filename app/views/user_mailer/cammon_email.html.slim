@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+  body
+    h1 <%= @user.name %>様、example.comへようこそ。
+    p
+      | example.comへのサインアップが成功しました。
+      | your username is: <%= @user.login %>.
+      br/
+    p
+      | このサイトにログインするには、<%= @url %>をクリックしてください。
+    p 新規登録ありがとうございます。どうぞお楽しみくださいませ。
+
+
+
