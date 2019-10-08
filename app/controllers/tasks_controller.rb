@@ -23,6 +23,7 @@ class TasksController < ApplicationController
     end
 
     if @task.save
+      TaskMailer.creation_email(@task).deliver_now  #メール送信の記述
       redirect_to @task, notice: "タスク「#{@task.name}」と登録しました。"
     else
       render :new
